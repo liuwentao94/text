@@ -1,0 +1,104 @@
+@charset "utf-8";
+html{min-width:776px;}/*公共属性，最小宽度*/
+body{ margin:0px;
+      padding:0px; 
+	  border:0px; 
+	  color:#000; 
+	  font-size:14px;
+	  line-height:160%;
+	  text-align:center; 
+	  background:#6D89DD;
+	  font-family:'宋体','新宋体',arial,verdana,sans-serif;
+	}/*内容属性，边距、字体颜色、字体大小、行高、居中对齐、背景颜色、字体设置等*/
+a{ margin:0px; 
+   padding:0px; 
+   border：0px; 
+   text-decoration:none;
+  }/*超链接属性，无边距、无边框、无下划线*/
+a:link{ color:#E66133;}/*超链接未访问状态下的颜色*/
+a:visited{ color:#000;}/*已访问（点击过）的链接颜色*/
+a:hover{ color:#637dbc; 
+         text-decoration:underline;
+   }/*鼠标经过时的颜色并显示下划线*/
+pre{ text-indet:0; 
+     background:#dddddd; 
+	 padding:0; 
+	 margin:0; 
+	 corlor:blue;
+	}/*预定义格式属性，浅灰色背景，无首行缩进，边距大小*/
+#top{ width:776px; 
+      margin-right:auto; 
+	  margin-left:auto; 
+	  padding:0px; 
+	  height:12px;
+	  background: url(../img/2.4.2/images/bg_top1.gif) #fff repeat-x left top; 
+	  overflow::hidden;
+	}/*顶部宽度776,像素，边界自动*/
+#top1{width:776px;
+      margin-right:auto;
+	  margin-left:auto;
+	  padding:0px;
+	  height:121px;
+	}/*顶部布局*/
+#main{ width:776px; 
+       margin-right:auto; 
+	   margin-left:auto; 
+	   padding:1.2pm 0px; 
+	   background:url(../img/2.4.2/images/bg_dot1.gif) #fff repeat left top; text-align:left;
+	 }/*外部定义背景图像，实现麻点显示效果*/
+#content{ width:710px;
+          margin-right:auto;
+		  margin-left:auto;
+		  padding:1em;
+		  background:#fff;}/*块中块布局，内层定义背景颜色为白色，实现中间内容区域遮盖麻点显示*/
+#title{ font-weight::bold; 
+        margin:0px 0px 0.5em 0px; 
+		padding:0.5em 100px 0.5em 1em; 
+		font-size:24px; 
+		color:#00a06b; 
+		text-align:left; 
+		border-bottom:solid #9ea3c1 2px;
+	}/*标题栏，宽度加粗，外边距、内边距，字号，字体颜色，文本水平向左对齐，添加下线框*/
+.sub{ color:#00a06b;
+      font-weight:bold;
+	  font-size:13px;
+	  text-align:left;
+	  padding:1em 2em 0;
+	  background:url(../img/2.4.2/images/0.gif) #FFFFFF no-repeat 1em 74%;}/*小标题区域属性*/
+.content{ text-indent:2em;
+          font-size:13px;
+		  margin-left:2em;
+		  padding:1em 6px;}/*内容区域显示属性，首行文本缩进2个文字大小*/
+#gotop{ width:100%;
+        margin:0px;
+		padding:0px;
+		background:#FFFFFF; height:2em; font-size:12px; text-align:right;}/*页面 链接区域属性*/
+#footer{ clear:both;
+         width:776px;
+		 margin-right:auto;
+		 margin-left:auto;
+		 padding:0px;
+		 background:url(../img/2.4.2/images/bg_bottom.gif) #fff repeat left top;
+		 text-align:center;
+		 height:39px;
+		 color:#ddd;}/*页脚装修图*/
+#copyright{ width:776px;
+            margin-right:auto;
+			margin-left:auto;
+			padding:5px 0px 0px 0px;
+			background:#fff;
+			text-align:center;
+			height:60px;
+			line-height:13px;
+			font-size:12px;
+			color::#9EA0BB;
+}/*版权信息*/
+#copyright a{color:#667ebe;}
+.box{ background:url(../img/2.4.2/images/nt.gif) repeat;}
+.tl{ background:url(../img/2.4.2/images/tl.gif) no-repeat top left;}
+.tr{ background:url(../img/2.4.2/images/tr.gif) no-repeat top right;}
+.bl{ background:url(../img/2.4.2/images/bl.gif) no-repeat bottom left;}
+.br{ background:url(../img/2.4.2/images/br.gif) no-repeat bottom right;}
+/*圆角特效*/	
+/* CSS Document */
+

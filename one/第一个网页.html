@@ -1,0 +1,386 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>第一个网页区块链</title>
+<style>
+    body{
+    	margin:0;/*外边距*/
+    	padding:0;/*内边距*/
+    	background:#b0b0b0;/*背景颜色*/
+    }
+	p{
+    	font-size:12px;
+		text-indent:2em;
+	}/*文段字体字号，首行缩进两个文字大小空间*/
+	h1{
+    	font-size:20px;
+    }/*标题字号*/
+    h2{
+    	font-size:15px;
+    }/*标题字号*/
+	a{
+    	text-decoration:none;
+    }/*文字修饰为无，清除超链接的下划线*/
+	.right a:hover{color:#7FABF8!important;}
+	.left{
+    	float:left;
+    }/*类选择器，首页标图位于左边*/
+	.right{
+ 
+    	float:right;
+    }/*类选择器，无排序链接位于右边*/
+    .title{
+    	text-align: center;/*属性规定元素中的文本的水平对齐方式,将文本排列到中间*/
+    	border:1px solid;/*线框实线，1像素*/
+    	font-size:12px;/*文字字号*/
+    	width:100%;/*设置元素宽度*/
+    	background:#363636;/*设置背景颜色*/
+    	height:50px;/*设置元素高度*/
+    }/*类选择器，头部样式设置*/
+    .title img{
+    	width:60px;
+    }/*类选择器，设置图片宽度大小*/
+    .title div{
+    	width:35%;/*设置元素宽度*/
+    	height:100%;/*设置元素高度*/
+    	
+    }
+    .title ul li{
+    	
+    	margin-right:20px;/*设置元素的右外边距,定义基于父对象总高度的百分比右外边距*/
+    	float:left;/*定义元素在哪个方向浮动*/
+    }
+    .title a{
+    	color:#FFF;
+    }
+    .title .import{
+    	color:#b0b0b0;
+    }
+    .body1{
+    	border:1px solid;/*边框属性*/
+    	margin:15px 10px;/*设置所有外边距属性*/
+    	background:#FFF;
+    	font:#000;/*设置所有字体属性*/
+    	font-weight:bold;/*规定字体粗细*/
+    	box-shadow: 0px 1px 2px #000;/*设置元素的阴影效果,阴影类型 X轴位移 Y轴位移 阴影大小 阴影扩展 阴影颜色*/
+    }
+    .body1 div{
+    	line-height: 1.5em;/*设置行间的距离（行高）*/
+    	margin:0 15px;/*设置所有外边距属性*/
+    }
+    .body1 img{
+    	width:80px;
+    }
+    .body1 ul{
+    	text-align: left;/*属性规定元素中的文本的水平对齐方式,将文本排列到左边*/
+    	font-size:13px;
+    	list-style:none;/*设置所有的列表属性*/
+    }
+    .body1 .beautiful{
+    	width:150px;
+    	height:150px;
+    	line-height:1.2em;
+    	margin:10px;
+    	text-align: center;
+    	border:1px solid #363636;
+    }
+    .body1 .beautiful img{
+    	width:100px;
+    	height:100px;
+    }
+    .body1 .table-head{
+    	border:1px solid;
+    	margin:20px 15px;
+    }
+    .leftmenu{
+    	border-left:4px solid #b0b0b0;/*属性把左边框的所有属性设置到一个声明中*/
+    	padding-left:20px;/*设置元素左内边距*/
+    }
+    table{
+    	font-size:15px;
+    	border-collapse: collapse;/*设置表格的边框是否被合并为一个单一的边框，还是象在标准的 HTML 中那样分开显示*/
+    	width: 100%;
+    	border:1px solid #b0b0b0;
+    	margin: 0 auto;
+    	table-layout:fixed;/*显示表格单元格、行、列的算法规则*/
+    }
+    td,th{
+    	text-align: left;/*属性规定元素中的文本的水平对齐方式,将文本排列到左边*/
+    }
+    th{
+    	color:#FFF;
+    	background:#000;
+    	
+    }
+    .table-head tr:last-child{
+    	background:#b0b0b0;
+    }
+    input[type="text"]{
+    	width: 180px;
+    	border:1px solid #808080;
+    }
+    span{
+    	font-size:10px;
+    	color:#b0b0b0;
+    }
+    form{
+    	margin:15px 15px;
+    	font-size:12px;
+    }
+    form table{
+    	font-size:12px;
+    	border:0px;
+    	vertical-align: center;/*设置元素的垂直对齐方式*/
+    	height:200px;
+    }
+    form tr td:first-child{
+    	text-align: right;
+    }
+    input[type="button"]{
+    	display:block;/*规定元素应该生成的框的类型*/
+    	color:#FFF;
+    	font-size:25px;
+    	margin:0 auto;
+    	width:80%;
+    	background:#205AA7;
+    	height:50px;
+    }
+</style>
+</head>
+
+<body>
+<div class="title">
+	<div class="left" style="margin:0 auto;">
+		<img src="../img/ambrosus.png">
+	</div >
+	<div class="right">
+		<ul>
+			<li><a href="https://ambrosus.com/index.zh">Ambrosus</a></li>
+			<li><a href="https://etherparty.com/">Etherparty</a></li>
+			<li><a href="https://worldcore.eu/">Worldcore</a></li>
+			<li><a href="http://www.energolabs.com/#/">Energo</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="div1"><h1>区块链项目</h1></div>
+<div id="div2">
+<ul>
+<li><a href="https://ambrosus.com/index.zh" title="食品供应链">Ambrosus</a></li>
+<li><a href="https://etherparty.com/" title="智能合约编译器">Etherparty</a></li>
+<li><a href="https://worldcore.eu/" title="金融">Worldcore</a></li>
+<li><a href="http://www.energolabs.com/#/" title="分布式新能源">Energo</a></li>
+</ul>
+</div>
+
+<div class="body1">
+    <div> 
+         <h1>Ambrosus</h1>
+    </div>
+    <div>
+         <h2>食品及医疗供应系统</h2>
+    </div>
+    <div>
+         <p>文章作者：闻道 &nbsp; 文章发表时间：2018年3月7日</p>
+    </div>
+    <div>
+         <p>Ambrosus的使命是提高全球供应链的效率。公司拥有一支由<a>传感器技术</a>、数据完整性和供应链管理方面的世界知名专家组成的专门团队。<br/>Ambrosus平台的核心是一个点到点的综合技术解决方案，它具有许多属性，如协议层和开发工具，以及硬件和基本软件。Ambrosus协议和软件层及其分布式技术在以太坊网络上运行，来自物联网设备的数据在其分散系统上进行监控。<br/>项目令牌AMB（琥珀币）是符合<strong>ERC-20</strong>的令牌，在Ambrosus平台上提供重要的公用服务。琥珀标记是世界上第一个数据保密标记，用于收集Ambrosus供应链的环境，生物和后勤信息，同时附着在交易对手之间的产品中。琥珀令牌也可以作为Ambrosus网络上的价值转移。<br/>与Iota、Vechain（唯链）等类似的加密项目相比，Ambrosus市值更低。这可能意味着，随着技术和组织的日益成熟，公司未来有可能和空间大幅增加市值。<br/>有关Ambrosus项目的更多技术说明，<a href="https://ambrosus.com/assets/Ambrosus-White-Paper-Chinese.pdf" target="_blank">可登陆官网查看他们的白皮书。</a></p>
+    </div>
+    <div>
+         <img src="../img/ambrosus.png"><br/>
+    </div>
+    <div>
+         <p>首席执行官Angel Versetti最近在Reddit上表示，他计划在2018年初扩大营销，所以我们应该看到更多的策略在2018年第一季度得到关注和支持。<br/>
+目前他们有一个博客，他们经常发布关于Ambrosus发展的更新。他们的社交媒体与其他加密项目相比并不是那么大，但是正在不断增长，正如上面提到的那样，我认为一旦他们更加关注<strong>2018年的营销方面</strong>，这一切就会改变。<br/>
+除了阅读他们的博客文章，像<a href="https://www.reddit.com/r/ambrosus/" target="_blank">Reddit</a>，<a href="https://twitter.com/AmbrosusAMB" target="_blank">Twitter</a>和<a href="https://www.facebook.com/ambrosusAMB" target="_blank">Facebook</a>这样的社交媒体网站看起来像是很好的场所，可以找到有关Ambrosus项目的最新信息。</p>
+     </div>
+</div>
+<div class="body1">
+    <div>
+         <h1>Etherparty</h1>
+    </div>
+    <div>
+          <h2>智能合约编译器</h2>
+    </div>
+    <div>
+          <p>文章作者：闻道 &nbsp; 文章发表时间：2018年3月8日</p>
+    </div>
+    <div>
+          <p>Etherparty是一个智能合约向导软件。它允许没有任何智能合约编写经验的用户来创建一个针对各种类型交易的、具有法律效力、且可自发执行的数字合约。它可以解决在任何区块链上创建、管理、执行智能合约的复杂性问题。<br/>
+<strong>Etherparty的出现，不仅仅为客户节省成本更为客户创造新价值。在现代商业社会里，若为客户创造的价值越多，势必获得的回报也就越多。</strong>FUEL（ERC-20代币）是为EtherParty平台提供支持的代币。用户需要使用这些代币来支付访问平台的功能权限，包括访问智能合约库、安全监控工具和网络监控仪表盘。智能合约还将要求使用FUEL代币，并在将来作为多个区块链上智能合同的访问权限。由于在平台上执行各种操作需要少量代币，所以Etherparty使用量越多，代币越有价值。<br/>有关Ambrosus项目的更多技术说明，<a href="https://etherparty.com/Etherparty_White_Paper_CN.pdf" target="_blank">可登陆官网查看他们的白皮书。</a></p>
+    </div>
+    <div>
+         <img src="../img/etherparty.jpg">
+    </div>
+    <div>
+         <ul>
+             <li>打赌</li>
+             <li>Token创造</li>
+             <li>智能合约</li>
+             <li>投票</li>
+         </ul>
+    </div>
+</div>
+<div class="body1">
+    <div>
+         <h1>图片</h1>
+    </div>
+    <div class="beatiful"
+         <p>好看的图片</p>
+             <img src="../img/ambrosus.png">
+    </div>
+    <div class="beatiful"
+         <p>好看的图片</p>
+             <img src="../img/ambrosus.png">
+    </div>
+    <div class="beatiful"
+         <p>好看的图片</p>
+             <img src="../img/ambrosus.png">
+    </div>
+    <div class="beatiful"
+         <p>好看的图片</p>
+             <img src="../img/ambrosus.png">
+    </div>    
+    <div class="beatiful"
+         <p>好看的图片</p>
+             <img src="../img/ambrosus.png">
+    </div>
+    <div class="beatiful"
+         <p>好看的图片</p>
+             <img src="../img/ambrosus.png">
+    </div>
+    <div class="beatiful"
+         <p>好看的图片</p>
+             <img src="../img/ambrosus.png">
+    </div>    
+    <div class="beatiful"
+         <p>好看的图片</p>
+             <img src="../img/ambrosus.png">
+    </div>
+    <div class="beatiful"
+         <p>好看的图片</p>
+             <img src="../img/ambrosus.png">
+    </div>    
+    <div class="beatiful"
+         <p>好看的图片</p>
+             <img src="../img/ambrosus.png">
+    </div>                
+</div>
+<div class="body1">
+    <div>
+         <h1>Worldcore和Energo</h1>
+    </div> 
+    <div>    
+<h2>金融和新能源</h2>
+    </div>
+    <div>
+         <ol>
+              <li>Ambrosus</li>
+              <li>Etherparty</li>
+              <li>Worldcore</li>
+              <li>Energo</li>
+         </ol>
+    </div>
+    <div class="table-head">
+        <p>市值一览表</p>
+        <table broder="1">
+         <tr>
+             <th>项目</th>
+             <th>市值</th>
+             <th>链接</th>
+         </tr>
+         <tr>
+             <td>Ambrosus</td>
+             <td>$165,916,697</td>
+             <td><a href="https://etherscan.io/token/Amber" title="AMB">查看!</a></td>
+         </tr>
+         <tr>
+             <td>Etherparty</td>
+             <td>$100,709,000</td>
+             <td><a href="https://etherscan.io/token/0xea38eaa3c86c8f9b751533ba2e562deb9acded40" title="FUEL">查看!</a></td>
+         </tr>
+         <tr>
+             <td>Worldcore</td>
+             <td>$15,605,855</td>
+             <td><a href="https://etherscan.io/token/0x72adadb447784dd7ab1f472467750fc485e4cb2d" title="WRC2">查看!</a></td>
+         </tr>
+         <tr>
+             <td>Energo</td>
+             <td>0</td>
+             <td><a href="https://etherscan.io/token/0x03806ce5ef69bd9780edfb04c29da1f23db96294" title="TSL">查看!</a></td>
+         </tr>
+         <tr>
+             <td>总计</td>
+             <td colspan="2">$252,231,552</td>
+         </tr>
+        </table>
+    </div>
+</div>
+<div class="body1">
+    <div class="leftmenu">
+         <h1>账号申请</h1>
+    </div>
+    <div>
+	<form><!--表单提交-->
+         <table><!--表格标签-->
+                <tr><!--行标签，有几对tr表示有几行-->
+                    <td><lable>请输入邮箱地址：</lable></td><!--列标签，有几对td表示一行中有几列-->
+                    <td><input type="text" value="这是一个文本输入框"></td>
+                </tr>
+                <tr>
+                <td><span>邮箱地址请按要求格式输入</span></td>
+                </tr>
+                <tr>
+                    <td><lable>请输入密码：</lable></td>
+                    <td><input type="text" value="这是一个文本输入框"></td>
+                </tr>
+                <tr>
+				    <td><span>密码请为6-16位英文数字</span></td>
+				</tr>
+				<tr>
+				    <td><lable>性别：</lable></td>
+				    <td>
+				    	<input type="radio" name="sex1">男</input>
+						<input type="radio" name="sex1">女</input>
+					</td>
+				 </tr>
+                 <tr>
+                     <td><lable>城市：</lable></td>
+                     <td>
+                         <select name="">
+                            <option value="北京">北京</option>
+                            <option value="上海">上海</option>
+                            <option value="广州">广州</option>
+                            <option value="深圳" selected="selected">深圳</option>
+                            <option value="南京">南京</option>
+                            <option value="成都">成都</option>
+                            <option value="武汉">武汉</option>
+                         </select>
+                     </td>
+                  <tr>
+                     <td><lable>爱好：</lable></td>
+				     <td>
+				    	<input type="checkbox" >运动</input>
+						<input type="checkbox" >艺术</input>
+						<input type="checkbox" >科学</input>
+				    </td>
+				  </tr>
+				  <tr>
+				    <td><lable>个人描述：</lable></td>
+				    <td>
+				        <textarea rows="5" cols="50">
+							这是一个自动换行的文本输入框
+					    </textarea>
+					</td>
+				  </tr>
+	</table>
+    <input type="button" value="提交按钮">
+    </form>
+    </div>
+    </div>
+    <div class="table">
+          <p>版权所有@</p>
+    </div>
+</body>
+</html>
